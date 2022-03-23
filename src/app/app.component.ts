@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Country, HttpService } from './services/http.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rest-countries';
+  countries: Country[] = []
+
+  constructor(http: HttpService) {
+    http.getAll()
+      .subscribe(c => this.countries = c)
+  }
 }
