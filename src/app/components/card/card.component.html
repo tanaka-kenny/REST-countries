@@ -1,9 +1,9 @@
 <div class="card">
-    <img class="flag-img" src="https://flagcdn.com/w320/cr.png" alt="">
+    <img class="flag-img" [src]="country.flags.png" alt="">
     <div class="content">
-        <p class="country-name">Germany</p>
-        <p class="info">Population: <span>81 000</span></p>
-        <p class="info">Region: <span>Europe</span></p>
-        <p class="info">Capital: <span>Berlin</span></p>
+        <p class="country-name"> {{ country.name.common }} </p>
+        <p class="info">Population: <span> {{ country.population }} </span></p>
+        <p class="info">Region: <span> {{ country.region }} </span></p>
+        <p class="info">Capital: <span> {{ country.capital }} </span></p>
     </div>
 </div>
