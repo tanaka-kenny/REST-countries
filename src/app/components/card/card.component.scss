@@ -1,0 +1,34 @@
+@import '../../../styles.scss';
+
+.card {
+    margin-top: 30px;
+    width: 250px;
+    box-shadow: 0 0px 5px 0 $dark-gray, 0 0px 5px 0 $dark-gray;
+    border-radius: 7px;
+}
+
+.flag-img {
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+}
+
+.content {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.country-name {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.info {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 10px;
+}
+
+span {
+    color: $dark-blue;
+    font-weight: 300;
+}
