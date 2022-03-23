@@ -1,0 +1,48 @@
+@import './../styles.scss';
+
+.container {
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: $very-light-gray;
+    height: 100vh;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0px 5px 0 $dark-gray, 0 0px 5px 0 $dark-gray;
+    padding-left: 7px;
+    background-color: $white;
+
+    .search-form {
+        border: none;
+        width: 270px;
+        height: 30px;
+        padding-left: 7px;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        height: 30px;
+        padding-left: 5px;
+    }
+}
+
+.filter {
+    border: none;
+    background: white;
+    height: 30px;
+    width: 150px;
+    padding: 7px; 
+    box-shadow: 0 0px 5px 0 $dark-gray, 0 0px 5px 0 $dark-gray;
+}
+
