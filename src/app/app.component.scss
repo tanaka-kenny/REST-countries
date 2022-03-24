@@ -9,8 +9,8 @@
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: space-between;
 }
 
