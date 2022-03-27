@@ -1,9 +1,5 @@
 <app-navbar></app-navbar>
 <div class="container">
     <app-filter></app-filter>
-    <div class="grid">
-        <app-card *ngFor="let c of countries" 
-            [country]="c"></app-card>
-    </div>
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
