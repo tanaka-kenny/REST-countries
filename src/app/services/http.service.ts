@@ -19,6 +19,8 @@ export class HttpService {
 export interface Country {
   name: {
     common: string;
+    nativeName?: {};
+    official?: string;
   };
   population: number;
   region: string;
@@ -26,5 +28,10 @@ export interface Country {
   flags: {
     png: string;
     svg?: string;
-  }
+  };
+  subregion?: string;
+  tld?: Array<string>;
+  currencies?: {};
+  languages?: {};
+  borders?: string[];
 }
