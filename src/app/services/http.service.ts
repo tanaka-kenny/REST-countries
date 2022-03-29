@@ -6,13 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
+  private countries: Country[] = [];
 
-  constructor(private http: HttpClient) { 
-    
+  constructor(private http: HttpClient) {
+    this.http.get<Country[]>('https://restcountries.com/v3.1/all')
+      .subscribe(c => this.countries = c)
   }
 
-  getAll(): Observable<Country[]> {
-    return this.http.get<Country[]>('https://restcountries.com/v3.1/all');
+  get nations() {
+    return this.countries;
   }
 }
 

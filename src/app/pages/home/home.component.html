@@ -1,4 +1,6 @@
 <div class="grid">
-    <app-card *ngFor="let c of countries" 
+    <app-card 
+        [routerLink]="['/detail/'+c.name.common]"
+        *ngFor="let c of countries" 
         [country]="c"></app-card>
 </div>

@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   countries: Country[] = []
 
   constructor(http: HttpService) { 
-    http.getAll().subscribe(c => this.countries = c);
+    this.countries = http.nations;
   }
 
   ngOnInit(): void {

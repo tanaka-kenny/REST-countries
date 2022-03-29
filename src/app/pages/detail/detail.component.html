@@ -6,28 +6,29 @@
 
 <div class="country">
     <div class="flag">
-        <img src="https://flagcdn.com/w320/uy.png" alt="">
+        <img [src]="country.flags.png" alt="">
     </div>
-    <div class="country-details">
-        <p class="name">Belgium</p>
+    <div class="country-details" *ngIf="country">
+        <p class="name"> {{ country.name.common }}</p>
         <div class="info">
             <div>
                 <ul>
-                    <li><span>Native Name: </span>Belgie</li>
-                    <li><span>Population</span></li>
-                    <li><span>Europe</span></li>
-                    <li><span>Western Europe</span></li>
-                    <li><span>Capital</span></li>
+                    <li><span>Native Name: </span> {{ country.name.nativeName }} </li>
+                    <li><span>Population: </span> {{ country.population }} </li>
+                    <li><span>Europe: </span> {{ country.region }} </li>
+                    <li><span>Western Europe: </span> {{ country.subregion }} </li>
+                    <li><span>Capital</span> {{ country.capital }} </li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><span>Top Level Domain</span>Belgie</li>
-                    <li><span>Currencies</span></li>
-                    <li><span>Languages</span></li>
+                    <li><span>Top Level Domain: </span> {{ country.tld }} </li>
+                    <li><span>Currencies: </span> {{ country.currencies }} </li>
+                    <li><span>Languages</span> {{ country.languages }} </li>
                 </ul>
             </div>
         </div>
-        <p class="neighbours"><span>Border Countries:</span> <a routerLink=""> Spain</a></p>
+        <p class="neighbours"><span>Border Countries:</span> 
+            <a routerLink="" *ngFor="let b of country.borders"> {{ b }} </a></p>
     </div>
 </div>
