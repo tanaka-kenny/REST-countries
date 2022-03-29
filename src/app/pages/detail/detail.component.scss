@@ -1,0 +1,85 @@
+@import '../../../styles.scss';
+
+.back {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 7px;
+    width: 100px;
+    box-shadow: $BOX_SHADOW;
+    background-color: $white;
+    cursor: pointer;
+    text-decoration: none;
+
+    span {
+        margin-left: 10px;
+        font-size: 15px;
+        font-weight: 300;
+        color: $very-dark-blue-lm;
+    }
+}
+
+.flag img {
+    width: 480px;
+}
+
+.country {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 45px;
+
+    .country-details {
+        width: 45%;
+        position: relative;
+        top: 45px;
+    
+        .name {
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div ul {
+            padding-left: 0;
+
+            li {
+                list-style: none;
+                font-size: 14px;
+                color: $very-dark-blue;
+
+                span {
+                    font-weight: 600;
+                    color: $very-dark-blue-lm;
+                }
+            }
+        }
+
+        .neighbours {
+            font-size: 14px;
+            font-weight: 600;
+
+            a {
+                text-decoration: none;
+                color: $very-dark-blue;
+                border-radius: 3px;
+                box-shadow: $BOX_SHADOW;
+                margin-left: 15px;
+                padding-left: 5px;
+                padding-right: 15px;
+                cursor: pointer;
+                font-weight: 300;
+            }
+        }
+
+    }
+
+    
+}
