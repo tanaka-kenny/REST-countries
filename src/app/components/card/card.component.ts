@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Country } from 'src/app/services/http.service';
+import { Country } from 'src/app/models/country.model';
 
 @Component({
   selector: 'app-card',
@@ -7,7 +7,7 @@ import { Country } from 'src/app/services/http.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() country: Country = {
+  @Input() country: Country | any= {
     name: {
       common: ''
     },

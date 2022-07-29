@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Country, HttpService } from 'src/app/services/http.service';
+import { Country } from 'src/app/models/country.model';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ export class HomeComponent implements OnInit {
   countries: Country[] = []
 
   constructor(http: HttpService) { 
-    this.countries = http.nations;
+    http.allNations()
+      .subscribe(c => this.countries = c)
   }
 
   ngOnInit(): void {

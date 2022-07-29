@@ -1,39 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Country } from '../models/country.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
-  private countries: Country[] = [];
+  private restUrl = environment.restCountries;
 
   constructor(private http: HttpClient) {
-    this.http.get<Country[]>('https://restcountries.com/v3.1/all')
-      .subscribe(c => this.countries = c)
+    this.http.get<Country[]>(`${this.restUrl}/all`)
+      .subscribe(c => {
+        console.log(c)
+      })
   }
 
-  get nations() {
-    return this.countries;
+  allNations() {
+    return this.http.get<Country[]>(`${this.restUrl}/all`)
   }
-}
 
-export interface Country {
-  name: {
-    common: string;
-    nativeName?: {};
-    official?: string;
-  };
-  population: number;
-  region: string;
-  capital: string;
-  flags: {
-    png: string;
-    svg?: string;
-  };
-  subregion?: string;
-  tld?: Array<string>;
-  currencies?: {};
-  languages?: {};
-  borders?: string[];
+  byName(name: string) {
+    this.allNations().subscribe(c => {
+      // c.find(country => country.name.common === name.toLowerCase())
+    })
+  }
 }

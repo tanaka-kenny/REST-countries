@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Country, HttpService } from 'src/app/services/http.service';
+import { Country } from 'src/app/models/country.model';
+import { HttpService } from 'src/app/services/http.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-detail',
@@ -23,8 +25,8 @@ export class DetailComponent implements OnInit {
   constructor(
     http: HttpService,
     route: ActivatedRoute) {
-      let c = route.snapshot.paramMap.get('country')
-      this.country = http.nations.find(m => m.name.common === c);
+      let c:any = route.snapshot.paramMap.get('country');
+      console.log(c)
    }
 
   ngOnInit(): void {
