@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Country } from '../models/country.model';
 
@@ -16,13 +17,7 @@ export class HttpService {
       })
   }
 
-  allNations() {
+  allNations():Observable<Country[]> {
     return this.http.get<Country[]>(`${this.restUrl}/all`)
-  }
-
-  byName(name: string) {
-    this.allNations().subscribe(c => {
-      // c.find(country => country.name.common === name.toLowerCase())
-    })
   }
 }

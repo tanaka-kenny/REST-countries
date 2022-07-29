@@ -10,12 +10,12 @@ import { HttpService } from 'src/app/services/http.service';
 export class HomeComponent implements OnInit {
   countries: Country[] = []
 
-  constructor(http: HttpService) { 
-    http.allNations()
-      .subscribe(c => this.countries = c)
+  constructor(private http: HttpService) { 
   }
 
   ngOnInit(): void {
+    this.http.allNations()
+      .subscribe(c => this.countries = c)
   }
 
 }

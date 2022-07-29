@@ -6,14 +6,14 @@
 
 <div class="country">
     <div class="flag">
-        <img [src]="country.flags.png" alt="">
+        <img [src]="country.flag" alt="">
     </div>
     <div class="country-details" *ngIf="country">
-        <p class="name"> {{ country.name.common }}</p>
+        <p class="name"> {{ country.name }}</p>
         <div class="info">
             <div>
                 <ul>
-                    <li><span>Native Name: </span> {{ country.name.nativeName }} </li>
+                    <li><span>Native Name: </span> {{ country.nativeName }} </li>
                     <li><span>Population: </span> {{ country.population }} </li>
                     <li><span>Europe: </span> {{ country.region }} </li>
                     <li><span>Western Europe: </span> {{ country.subregion }} </li>
@@ -22,9 +22,17 @@
             </div>
             <div>
                 <ul>
-                    <li><span>Top Level Domain: </span> {{ country.tld }} </li>
-                    <li><span>Currencies: </span> {{ country.currencies }} </li>
-                    <li><span>Languages</span> {{ country.languages }} </li>
+                    <li><span>Top Level Domain: </span> {{ country.topLevelDomain[0] }} </li>
+                    <li>
+                        <span>Currencies: </span> 
+                        <span *ngFor="let currency of country.currencies"
+                        style="font-weight: normal;">{{ currency.name }}</span> 
+                    </li>
+                    <li>
+                        <span>Languages: </span> 
+                        <span *ngFor="let language of country.languages" 
+                            style="font-weight: normal;">{{ language.name }}</span>
+                    </li>
                 </ul>
             </div>
         </div>

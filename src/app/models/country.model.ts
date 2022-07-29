@@ -1,30 +1,30 @@
 export interface Country {
-    alpha2Code: string;
-    alpha3Code: string;
-    altSpellings: string[];
-    area: number;
-    borders: string[];
-    callingCodes: string[];
+    alpha2Code?: string;
+    alpha3Code?: string;
+    altSpellings?: string[];
+    area?: number;
+    borders?: string[];
+    callingCodes?: string[];
     capital: string;
-    cioc: string;
+    cioc?: string;
     currencies: Currency[],
-    demonym: string;
-    flag: string;
-    flags: Flag;
-    gini: number;
-    independent: boolean;
-    languages: Language[];
-    latlng: number[];
+    demonym?: string;
+    flag?: string;
+    flags?: Flag;
+    gini?: number;
+    independent?: boolean;
+    languages?: Language[];
+    latlng?: number[];
     name: string;
     nativeName: string;
-    numericCode: string;
+    numericCode?: string;
     population: number;
     region: string;
-    regionalBlocs: RegionalBloc[];
-    subregion: string;
-    timezones: string[];
-    topLevelDomain: string[];
-    translations: any;
+    regionalBlocs?: RegionalBloc[];
+    subregion?: string;
+    timezones?: string[];
+    topLevelDomain?: string[];
+    translations?: any;
   
   }
   

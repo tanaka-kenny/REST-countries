@@ -10,23 +10,15 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  country: Country | any = {
-    name: {
-      common: ''
-    },
-    population: 0,
-    region: '',
-    capital: '',
-    flags: {
-      png: '',
-    }
-  };
+  country: Country | any;;
 
   constructor(
     http: HttpService,
     route: ActivatedRoute) {
-      let c:any = route.snapshot.paramMap.get('country');
-      console.log(c)
+      let c = route.snapshot.paramMap.get('country');  
+      http.allNations().subscribe(countries => {
+        this.country = countries.find(country => country.name === c)
+      });
    }
 
   ngOnInit(): void {
