@@ -2,10 +2,14 @@
 
 .container {
     padding-top: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: $very-light-gray;
     height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 

@@ -24,3 +24,9 @@
         padding-left: 4px;
     }
 }
+
+@media (max-width: 600px) {
+    .top-nav {
+        padding: 5%;
+    }
+}

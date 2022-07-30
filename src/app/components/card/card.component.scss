@@ -2,14 +2,14 @@
 
 .card {
     margin-top: 30px;
-    width: 220px;
+    width: 85%;
     box-shadow: 0 0px 5px 0 $dark-gray, 0 0px 5px 0 $dark-gray;
     border-radius: 7px;
 }
 
 .flag-img {
     width: 100%;
-    height: 150px;
+    height: auto;
     border-radius: 7px 7px 0 0;
 }
 
@@ -32,4 +32,10 @@
 span {
     color: $dark-blue;
     font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
 }

@@ -37,3 +37,17 @@
     padding: 7px; 
     box-shadow: 0 0px 5px 0 $dark-gray, 0 0px 5px 0 $dark-gray;
 }
+
+@media (max-width: 768px) {
+    .search-filter {
+        display: block;
+    }
+
+    .search-area {
+        margin-bottom: 5%;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+}

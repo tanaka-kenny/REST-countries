@@ -3,3 +3,23 @@
     grid-template-columns: repeat(4,auto);
     justify-content: space-between;
 }
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3,auto);
+    }
+}
+
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(2,auto);
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1,auto);
+        justify-content: space-around;
+    }
+}
