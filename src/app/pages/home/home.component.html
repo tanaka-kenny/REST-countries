@@ -1,4 +1,5 @@
-<app-filter (searchValue)="searchCountries($event)"></app-filter>
+<app-filter (searchValue)="searchCountries($event)"
+    (filterByRegion)="onFilterByRegion($event)"></app-filter>
 <div class="grid">
     <app-card 
         [routerLink]="['/detail/'+c.name]"

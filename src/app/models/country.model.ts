@@ -1,3 +1,5 @@
+export const REGIONS = ['Africa', 'Americas', 'Antarctic Ocean', 'Asia', 'Europe', 'Oceania'];
+
 export interface Country {
     alpha2Code?: string;
     alpha3Code?: string;

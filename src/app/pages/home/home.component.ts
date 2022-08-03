@@ -11,7 +11,6 @@ import { HttpService } from 'src/app/services/http.service';
 export class HomeComponent implements OnInit {
   countries: Country[] = [];
   input = new FormControl('');
-  regions = ['Asia', 'Africa', 'Europe'];
   searchText: string = '';
 
   constructor(
@@ -27,4 +26,7 @@ export class HomeComponent implements OnInit {
     this.searchText = input;
   }
 
+  onFilterByRegion(region: string) {
+    this.searchText = region;
+  };
 }

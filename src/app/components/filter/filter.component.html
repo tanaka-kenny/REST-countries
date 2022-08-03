@@ -11,8 +11,11 @@
             [formControl]="input"
             (keyup)="onSearch(input.value)">
     </div>
-    <select name="" id="" class="filter">
+    <select name="" id="" class="filter" #regionName (change)="onFilterByRegion(regionName.value)"> 
+        <!-- next time use reactive forms for the above -->
         <option value="">Filter by region</option>
-        <option value="">Africa</option>
+        <option *ngFor="let region of regions" 
+            [value]="region"
+            > {{ region }} </option>
     </select>
 </div>

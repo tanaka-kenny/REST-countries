@@ -8,7 +8,9 @@ import { FormControl } from '@angular/forms';
 })
 export class FilterComponent implements OnInit {
   input = new FormControl('');
+  regions = ['Africa', 'Americas', 'Antarctic Ocean', 'Asia', 'Europe', 'Oceania'];
   @Output() searchValue = new EventEmitter<string>();
+  @Output() filterByRegion = new EventEmitter<string>();
 
 
   constructor() { }
@@ -18,6 +20,10 @@ export class FilterComponent implements OnInit {
 
   onSearch(value: string) {
     this.searchValue.emit(value);
+  }
+
+  onFilterByRegion(region: string) {
+    this.filterByRegion.emit(region);
   }
 
 }

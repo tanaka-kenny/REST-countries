@@ -11,10 +11,6 @@ export class HttpService {
   private restUrl = environment.restCountries;
 
   constructor(private http: HttpClient) {
-    this.http.get<Country[]>(`${this.restUrl}/all`)
-      .subscribe(c => {
-        console.log(c)
-      })
   }
 
   allNations():Observable<Country[]> {
