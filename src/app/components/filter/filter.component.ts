@@ -18,7 +18,6 @@ export class FilterComponent implements OnInit {
 
   onSearch(value: string) {
     this.searchValue.emit(value);
-    // console.log(value)
   }
 
 }

@@ -11,6 +11,8 @@ import { HttpService } from 'src/app/services/http.service';
 export class HomeComponent implements OnInit {
   countries: Country[] = [];
   input = new FormControl('');
+  regions = ['Asia', 'Africa', 'Europe'];
+  searchText: string = '';
 
   constructor(
     private http: HttpService,) { 
@@ -22,14 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   searchCountries(input: string) {
-    let searchedCountries: Country[] = [];
-    for (let c of this.countries) {
-      if (c['name'].toLowerCase().includes(input.toLowerCase())) 
-        searchedCountries.push(c)
-        console.log(searchedCountries)
-    }
-    this.countries = searchedCountries;
-    
+    this.searchText = input;
   }
 
 }

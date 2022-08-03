@@ -10,6 +10,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     FilterComponent,
     DetailComponent,
-    HomeComponent
+    HomeComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,

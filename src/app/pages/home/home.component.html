@@ -2,6 +2,6 @@
 <div class="grid">
     <app-card 
         [routerLink]="['/detail/'+c.name]"
-        *ngFor="let c of countries" 
+        *ngFor="let c of countries | searchFilter:searchText" 
         [country]="c"></app-card>
 </div>
