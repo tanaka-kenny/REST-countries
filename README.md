@@ -1,10 +1,11 @@
 # REST-countries
 This a solution to Frontend Mentor's REST Countries API with colour theme switcher challenge.
 
+## Host URL []
+
 ## Tools used:-
 * Angular 12
-* Firebase (for hosting)
-* Bootstrap & Ngbootsrap
+* Rest Countries API
 
 ## Users are be able to:
 
